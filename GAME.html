@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
     <title>Enhanced Snake Xenzia</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; background-color: #222; color: white; }
+        body { 
+            text-align: center; 
+            font-family: Arial, sans-serif; 
+            background-color: #1a1a1a; 
+            color: white;
+        }
         h1, p { margin: 10px; }
-        canvas { background: #111; display: block; margin: 0 auto; border: 5px solid white; }
+        canvas { 
+            background: linear-gradient(to bottom, #222, #000);
+            display: block; 
+            margin: 0 auto; 
+            border: 5px solid white; 
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
         #score { font-size: 20px; }
-        #restartBtn { margin-top: 20px; padding: 10px 20px; font-size: 16px; background-color: lime; border: none; cursor: pointer; }
-        #restartBtn:hover { background-color: green; color: white; }
+        #restartBtn { 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            background-color: lime; 
+            border: none; 
+            cursor: pointer; 
+            transition: 0.3s ease-in-out;
+        }
+        #restartBtn:hover { 
+            background-color: green; 
+            color: white; 
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -65,7 +88,7 @@
         });
         
         function draw() {
-            ctx.fillStyle = "#111";
+            ctx.fillStyle = "#000";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
             ctx.fillStyle = "red";
